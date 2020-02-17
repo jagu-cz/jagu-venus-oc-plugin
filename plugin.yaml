@@ -1,0 +1,6 @@
+plugin:
+    name: 'jagu.venus::lang.plugin.name'
+    description: 'jagu.venus::lang.plugin.description'
+    author: 'Jagu s.r.o.'
+    icon: oc-icon-pencil-square-o
+    homepage: ''

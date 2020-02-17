@@ -1,0 +1,139 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        # Project section
+        project_section:
+            tab: jagu.venus::lang.form.project
+            label: jagu.venus::lang.form.project
+            type: section
+        title:
+            tab: jagu.venus::lang.form.project
+            label: jagu.venus::lang.form.name
+            placeholder: jagu.venus::lang.form.name
+            type: text
+        description:
+            tab: jagu.venus::lang.form.project
+            label: jagu.venus::lang.form.description
+            placeholder: jagu.venus::lang.form.description
+            type: richeditor
+        cover_image:
+            tab: jagu.venus::lang.form.project
+            label: jagu.venus::lang.form.project_cover_image
+            type: mediafinder
+            mode: image
+        # Appearance section
+        appearance_section:
+            tab: jagu.venus::lang.form.appearance
+            label: jagu.venus::lang.form.appearance
+            type: section
+        layout:
+            tab: jagu.venus::lang.form.appearance
+            label: jagu.venus::lang.form.top_nav_appearance
+            type: dropdown
+            default: 'dark-dynamic'
+            options:
+                'dark-dynamic': jagu.venus::lang.form.top_nav_appearance_dark_dynamic
+                'light-dynamic': jagu.venus::lang.form.top_nav_appearance_light_dynamic
+                'dark': jagu.venus::lang.form.top_nav_appearance_dark
+                'light': jagu.venus::lang.form.top_nav_appearance_light
+
+        # Data section
+        data_section:
+            tab: jagu.venus::lang.form.content
+            label: jagu.venus::lang.form.content
+            type: section
+        data:
+            tab: jagu.venus::lang.form.content
+            type: repeater
+            prompt: jagu.venus::lang.form.add_row
+            form:
+                fields:
+                    section:
+                        label: jagu.venus::lang.form.row
+                        type: section
+                    columns:
+                        type: repeater
+                        prompt: jagu.venus::lang.form.add_cell
+                        form:
+                            fields:
+                                section:
+                                    label: jagu.venus::lang.form.cell
+                                    type: section
+                                width:
+                                    label: jagu.venus::lang.form.cell_width
+                                    type: balloon-selector
+                                    default: 'col-lg-12 col-md-12 col-sm-12'
+                                    options:
+                                        'col-lg-12 col-md-12 col-sm-12': jagu.venus::lang.form.cell_width_full
+                                        'col-lg-6 col-md-6 col-sm-12': jagu.venus::lang.form.cell_width_1_2
+                                        'col-lg-4 col-md-6 col-sm-12': jagu.venus::lang.form.cell_width_1_3
+                                        'col-lg-3 col-md-6 col-sm-12': jagu.venus::lang.form.cell_width_1_4
+                                        'col-lg-8 col-md-6 col-sm-12': jagu.venus::lang.form.cell_width_2_3
+                                        'col-lg-9 col-md-6 col-sm-12': jagu.venus::lang.form.cell_width_3_4
+                                vertical_align:
+                                    label: jagu.venus::lang.form.vertical_align
+                                    type: balloon-selector
+                                    default: 'align-self-start'
+                                    options:
+                                        'align-self-start': jagu.venus::lang.form.top
+                                        'align-self-center': jagu.venus::lang.form.center
+                                        'align-self-end': jagu.venus::lang.form.bottom
+                                left_margin:
+                                    label: jagu.venus::lang.form.margin_left
+                                    type: balloon-selector
+                                    default: ''
+                                    options:
+                                        '': jagu.venus::lang.form.none
+                                        'pl-md-1 pl-sm-0': jagu.venus::lang.form.smaller
+                                        'pl-md-2 pl-sm-0': jagu.venus::lang.form.small
+                                        'pl-md-3 pl-sm-0': jagu.venus::lang.form.normal
+                                        'pl-md-4 pl-sm-0': jagu.venus::lang.form.big
+                                        'pl-md-5 pl-sm-0': jagu.venus::lang.form.bigger
+                                right_margin:
+                                    label: jagu.venus::lang.form.margin_right
+                                    type: balloon-selector
+                                    default: ''
+                                    options:
+                                        '': jagu.venus::lang.form.none
+                                        'pr-md-1 pr-sm-0': jagu.venus::lang.form.smaller
+                                        'pr-md-2 pr-sm-0': jagu.venus::lang.form.small
+                                        'pr-md-3 pr-sm-0': jagu.venus::lang.form.normal
+                                        'pr-md-4 pr-sm-0': jagu.venus::lang.form.big
+                                        'pr-md-5 pr-sm-0': jagu.venus::lang.form.bigger
+                                content_type:
+                                    label: jagu.venus::lang.form.content_type
+                                    type: balloon-selector
+                                    default: 'image'
+                                    options:
+                                        'image': jagu.venus::lang.form.image
+                                        'video': jagu.venus::lang.form.video
+                                        'text': jagu.venus::lang.form.text
+                                # Text
+                                content_text:
+                                    label: jagu.venus::lang.form.text
+                                    type: richeditor
+                                    trigger:
+                                        action: show
+                                        field: content_type
+                                        condition: value[text]
+                                # Image
+                                content_image:
+                                    label: jagu.venus::lang.form.image
+                                    type: mediafinder
+                                    mode: image
+                                    trigger:
+                                        action: show
+                                        field: content_type
+                                        condition: value[image]
+                                # Video
+                                content_video:
+                                    label: jagu.venus::lang.form.video
+                                    type: mediafinder
+                                    mode: file
+                                    trigger:
+                                        action: show
+                                        field: content_type
+                                        condition: value[video]

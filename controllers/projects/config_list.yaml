@@ -1,0 +1,21 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Name
+title: jagu.venus::lang.title.project
+
+# Model List Column configuration
+list: $/jagu/venus/models/project/columns.yaml
+
+# Model Class name
+modelClass: Jagu\Venus\Models\Project
+
+# Define url to edit lecturer
+recordUrl: jagu/venus/projects/update/:id
+
+# Show button to show/hide columns
+showSetup: true
+
+# Default order attribute
+defaultSort: sort_order

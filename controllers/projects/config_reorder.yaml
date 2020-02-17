@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: jagu.venus::lang.title.change_projects_order
+
+# Attribute name
+nameFrom: title
+
+# Model Class name
+modelClass: Jagu\Venus\Models\Project
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

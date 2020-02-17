@@ -1,0 +1,41 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    created_at:
+        label: jagu.venus::lang.column.created_at
+        type: datetime
+        invisible: true
+    updated_at:
+        label: jagu.venus::lang.column.updated_at
+        type: datetime
+        invisible: true
+    sort_order:
+        label: jagu.venus::lang.column.sort_order
+        type: number
+        invisible: false
+    title:
+        label: jagu.venus::lang.column.name
+        type: text
+        invisible: false
+    description:
+        label: jagu.venus::lang.column.description
+        type: text
+        invisible: true
+    slug:
+        label: jagu.venus::lang.column.slug
+        type: text
+        invisible: true
+    photos_count:
+        label: jagu.venus::lang.column.photos_count
+        type: number
+        invisible: false
+    text_count:
+        label: jagu.venus::lang.column.text_count
+        type: number
+        invisible: false
+    video_count:
+        label: jagu.venus::lang.column.video_count
+        type: number
+        invisible: false

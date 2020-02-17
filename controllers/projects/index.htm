@@ -1,0 +1,18 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="<?= Backend::url('jagu/venus/projects') ?>"><?= e(trans('jagu.venus::lang.plugin.name')) ?></a></li>
+    <li><?= e(trans($this->pageTitle)) ?></li>
+</ul>
+<?php Block::endPut() ?>
+
+<div class="form-buttons">
+    <a href="<?= Backend::url('jagu/venus/projects/create') ?>" type="button" class="btn btn-default">
+        <?= e(trans('jagu.venus::lang.button.new_project')) ?>
+    </a>
+
+    <a href="<?= Backend::url('jagu/venus/projects/reorder') ?>" type="button" class="btn btn-default">
+        <?= e(trans('jagu.venus::lang.button.reorder_projects')) ?>
+    </a>
+</div>
+
+<?= $this->listRender() ?>

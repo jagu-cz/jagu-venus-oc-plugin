@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: jagu.venus::lang.title.project
+form: $/jagu/venus/models/project/fields.yaml
+modelClass: Jagu\Venus\Models\Project
+defaultRedirect: jagu/venus/projects
+
+create:
+    redirect: jagu/venus/projects/update/:id
+    redirectClose: jagu/venus/projects
+
+update:
+    redirect: jagu/venus/projects/update/:id
+    redirectClose: jagu/venus/projects

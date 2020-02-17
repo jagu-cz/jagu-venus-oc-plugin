@@ -1,0 +1,5 @@
+1.0.0:
+    - Initialize plugin.
+    - initial_database_structure.php
+    - reorder_projects.php
+    - projects_layout_attribute.php

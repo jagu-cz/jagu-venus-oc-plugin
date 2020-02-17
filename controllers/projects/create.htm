@@ -1,0 +1,44 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="<?= Backend::url('jagu/venus/projects') ?>"><?= e(trans('jagu.venus::lang.plugin.name')) ?></a></li>
+    <li><a href="<?= Backend::url('jagu/venus/projects') ?>"><?= e(trans('jagu.venus::lang.title.projects')) ?></a></li>
+    <li><?= e(trans($this->pageTitle)) ?></li>
+</ul>
+<?php Block::endPut() ?>
+
+<?= Form::open(['class'=>'layout']) ?>
+
+<div class="layout-row">
+    <?= $this->formRender() ?>
+</div>
+
+<div class="form-buttons">
+    <div class="loading-indicator-container">
+        <button type="button"
+                data-request="onSave"
+                data-hotkey="ctrl+s, cmd+s"
+                data-load-indicator="<?= e(trans('jagu.venus::lang.indicator.saving')) ?>"
+                class="btn btn-primary"
+        >
+            <?= e(trans('jagu.venus::lang.button.save')) ?>
+        </button>
+
+        <button type="button"
+                data-request="onSave"
+                data-request-data="close:true"
+                data-hotkey="ctrl+enter, cmd+enter"
+                data-load-indicator="<?= e(trans('jagu.venus::lang.indicator.saving')) ?>"
+                class="btn btn-default"
+        >
+            <?= e(trans('jagu.venus::lang.button.save_and_close')) ?>
+        </button>
+
+        <span class="btn-text">
+            <a href="<?= Backend::url('chc/chc/languages') ?>">
+                <?= e(trans('jagu.venus::lang.button.cancel')) ?>
+            </a>
+        </span>
+    </div>
+</div>
+
+<?= Form::close() ?>
